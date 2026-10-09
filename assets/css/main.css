@@ -1659,3 +1659,66 @@ input, select, textarea {
 		body.is-preload #footer {
 			opacity: 0;
 		}
+
+/* Portfolio Enhancements */
+	.tag-list {
+		display: -webkit-flex;
+		display: -ms-flex;
+		display: flex;
+		-webkit-flex-wrap: wrap;
+		-ms-flex-wrap: wrap;
+		flex-wrap: wrap;
+		gap: 0.45rem;
+		list-style: none;
+		padding-left: 0;
+		margin: 0.5rem 0 1.25rem 0;
+	}
+
+		.tag-list li {
+			background: rgba(255, 255, 255, 0.08);
+			border: solid 1px rgba(255, 255, 255, 0.2);
+			border-radius: 4px;
+			padding: 0.2rem 0.65rem;
+			font-size: 0.75rem;
+			letter-spacing: 0.05rem;
+			line-height: 1.5;
+			color: #ffffff;
+		}
+
+	.sub-meta {
+		font-size: 0.8rem;
+		letter-spacing: 0.08rem;
+		text-transform: uppercase;
+		color: rgba(255, 255, 255, 0.7);
+		margin-top: -0.5rem;
+		margin-bottom: 1rem;
+	}
+
+	.role-title {
+		margin-bottom: 0.25rem;
+	}
+
+	.section-divider {
+		border: 0;
+		border-top: solid 1px rgba(255, 255, 255, 0.15);
+		margin: 2rem 0 1.5rem 0;
+	}
+
+	.highlight-box {
+		background: rgba(255, 255, 255, 0.04);
+		border: solid 1px rgba(255, 255, 255, 0.15);
+		border-radius: 4px;
+		padding: 1.25rem;
+		margin-bottom: 1.5rem;
+	}
+
+		.highlight-box h3,
+		.highlight-box h4 {
+			color: #ffffff;
+			margin-bottom: 0.5rem;
+		}
+
+		.highlight-box p:last-child,
+		.highlight-box ul:last-child {
+			margin-bottom: 0;
+		}
