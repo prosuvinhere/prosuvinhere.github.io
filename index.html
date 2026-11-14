@@ -1,293 +1,1014 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>Suvin Singh | Data Engineer &amp; AWS Certified Solutions Architect</title>
 		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<meta name="description" content="Portfolio of Suvin Singh - Data Engineer and AWS Certified Solutions Architect building terabyte-scale ELT pipelines and distributed lakehouse platforms using PySpark, Databricks, dbt, Snowflake, and AWS." />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Suvin Singh | Data Engineer &amp; AWS Certified Solutions Architect</title>
+		<meta name="description" content="Suvin Singh — Data Engineer at Deloitte and AWS Certified Solutions Architect building terabyte-scale ELT pipelines and distributed lakehouse platforms using PySpark, Databricks, dbt, Snowflake, and AWS." />
 		<meta name="author" content="Suvin Singh" />
 		<meta property="og:title" content="Suvin Singh | Data Engineer &amp; AWS Certified Solutions Architect" />
-		<meta property="og:description" content="Data Engineer building terabyte-scale ELT pipelines and distributed lakehouse platforms using PySpark, Databricks, dbt, Snowflake, and AWS." />
+		<meta property="og:description" content="Building terabyte-scale ELT pipelines and distributed lakehouse platforms using PySpark, Databricks, dbt, Snowflake, and AWS." />
 		<meta property="og:url" content="https://prosuvinhere.github.io/" />
 		<meta property="og:type" content="website" />
-		<link rel="stylesheet" href="assets/css/main.css" />
+
+		<!-- Google Fonts: Inter, Space Grotesk, JetBrains Mono -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@600;700;800&display=swap" rel="stylesheet" />
+
+		<!-- Font Awesome Icons & Portfolio Styles -->
+		<link rel="stylesheet" href="assets/css/fontawesome-all.min.css" />
+		<link rel="stylesheet" href="assets/css/portfolio.css" />
 		<link rel="icon" href="images/favicon1.ico" type="image/x-icon" />
-		<link rel="shortcut icon" href="images/favicon1.ico" type="image/x-icon" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
-	<body class="is-preload">
+	<body>
+		<!-- Scroll Progress Indicator -->
+		<div id="scroll-progress"></div>
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+		<!-- Interactive Distributed Data Network Canvas & Ambient Glows -->
+		<canvas id="network-canvas"></canvas>
+		<div class="ambient-glow glow-1"></div>
+		<div class="ambient-glow glow-2"></div>
+		<div class="ambient-glow glow-3"></div>
+		<div class="bg-grid-overlay"></div>
 
-				<!-- Header -->
-					<header id="header">
-						<div class="logo">
-							<span class="icon solid fa-database"></span>
-						</div>
-						<div class="content">
-							<div class="inner">
-								<h1>Suvin Singh</h1>
-								<p>Data Engineer &amp; AWS Certified Solutions Architect<br />Data Associate Engineer at Deloitte</p>
+		<!-- Floating Glassmorphic Navigation Bar -->
+		<header class="navbar" role="navigation" aria-label="Main Navigation">
+			<a href="#top" class="nav-brand">
+				<span class="brand-icon"><i class="fas fa-database"></i></span>
+				<span>Suvin Singh</span>
+				<span class="brand-status" title="System Online — Available for Data Engineering & Cloud Architecture"></span>
+			</a>
+
+			<ul class="nav-links" id="nav-links">
+				<li><a href="#about" class="active">Overview</a></li>
+				<li><a href="#architecture">Architecture</a></li>
+				<li><a href="#experience">Experience</a></li>
+				<li><a href="#projects">Projects</a></li>
+				<li><a href="#skills">Expertise</a></li>
+				<li><a href="#terminal">SQL CLI</a></li>
+				<li><a href="#credentials">Credentials</a></li>
+				<li><a href="#contact">Contact</a></li>
+			</ul>
+
+			<div class="nav-actions">
+				<button type="button" class="cmd-btn" id="cmd-open-btn" title="Open Command Palette">
+					<i class="fas fa-terminal"></i>
+					<span>Command</span>
+					<kbd>⌘K</kbd>
+				</button>
+				<button type="button" class="btn-resume-nav" onclick="openResumeModal()">
+					<i class="fas fa-file-pdf"></i>
+					<span>Resume</span>
+				</button>
+				<button type="button" class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle Menu">
+					<i class="fas fa-bars"></i>
+				</button>
+			</div>
+		</header>
+
+		<main id="top">
+			<!-- =================================================================
+			     HERO SECTION
+			     ================================================================= -->
+			<section class="hero" id="about">
+				<div class="container">
+					<div class="hero-grid">
+						<div class="hero-content">
+							<div class="status-pill">
+								<span class="brand-status"></span>
+								<span>DATA ASSOCIATE ENGINEER @ DELOITTE &bull; HYDERABAD, INDIA</span>
+							</div>
+
+							<h1 class="hero-title">
+								Architecting <span class="gradient-text">Terabyte-Scale</span> Lakehouse &amp; Cloud Platforms.
+							</h1>
+
+							<div class="hero-role-wrapper">
+								<i class="fas fa-angle-right"></i>
+								<span id="typewriter-role">Data Associate Engineer @ Deloitte</span>
+								<span class="cursor-blink"></span>
+							</div>
+
+							<p class="hero-description">
+								I’m <strong>Suvin Singh</strong> — a <strong>Data Engineer</strong> and <strong>AWS Certified Solutions Architect</strong> building high-throughput ELT pipelines and distributed lakehouse platforms using <strong>PySpark, Databricks, dbt, Snowflake, and AWS</strong> to cut query latency and enterprise cloud spend.
+							</p>
+
+							<div class="hero-cta-group">
+								<a href="#architecture" class="btn btn-primary">
+									<i class="fas fa-project-diagram"></i>
+									<span>Explore Lakehouse Architecture</span>
+								</a>
+								<button type="button" class="btn btn-secondary" onclick="openResumeModal()">
+									<i class="fas fa-eye"></i>
+									<span>Interactive Resume</span>
+								</button>
+								<a href="resume.pdf" target="_blank" class="btn btn-ghost">
+									<i class="fas fa-download"></i>
+									<span>PDF</span>
+								</a>
+							</div>
+
+							<div class="hero-quick-links">
+								<a href="https://linkedin.com/in/suvin-singh" target="_blank" rel="noopener noreferrer" class="social-pill">
+									<i class="fab fa-linkedin"></i>
+									<span>linkedin.com/in/suvin-singh</span>
+								</a>
+								<a href="https://github.com/prosuvinhere" target="_blank" rel="noopener noreferrer" class="social-pill">
+									<i class="fab fa-github"></i>
+									<span>github.com/prosuvinhere</span>
+								</a>
+								<a href="mailto:suvinsingh.work@gmail.com" class="social-pill">
+									<i class="fas fa-envelope"></i>
+									<span>suvinsingh.work@gmail.com</span>
+								</a>
 							</div>
 						</div>
-						<nav>
-							<ul>
-								<li><a href="#about">About</a></li>
-								<li><a href="#experience">Experience</a></li>
-								<li><a href="#projects">Projects</a></li>
-								<li><a href="#skills">Skills</a></li>
-								<li><a href="#education">Education</a></li>
-								<li><a href="#contact">Contact</a></li>
-							</ul>
-						</nav>
-					</header>
 
-				<!-- Main -->
-					<div id="main">
+						<!-- Hero Profile & Live Telemetry Card -->
+						<div class="hero-visual">
+							<div class="profile-card">
+								<div class="profile-img-wrapper">
+									<img src="images/IMG_5421.jpg" alt="Suvin Singh — Data Engineer & AWS Certified Solutions Architect" />
+									<div class="aws-floating-badge">
+										<div class="aws-icon-box">
+											<i class="fab fa-aws"></i>
+										</div>
+										<div class="aws-badge-text">
+											<strong>AWS Certified Solutions Architect</strong>
+											<span>Associate &bull; Verified Dec. 2025</span>
+										</div>
+									</div>
+								</div>
 
-						<!-- About -->
-							<article id="about">
-								<h2 class="major">About Me</h2>
-								<span class="image main"><img src="images/IMG_5421.jpg" alt="Suvin Singh" /></span>
-								<p>I am a <strong>Data Engineer</strong> and <strong>AWS Certified Solutions Architect</strong> building terabyte-scale ELT pipelines and distributed lakehouse platforms using <strong>PySpark, Databricks, dbt, Snowflake, and AWS</strong> to cut query latency and enterprise cloud spend.</p>
-								<p>Currently, I work as a <strong>Data Associate Engineer at Deloitte</strong> (Hyderabad, India), where I architect high-throughput ELT pipelines integrating enterprise ERP systems (SAP, Oracle) into centralized lakehouse architectures for 150+ cross-functional teams, optimize AWS cloud compute to save recurring enterprise spend, and manage fault-tolerant pipelines processing 5TB+ of financial records daily with automated validation checks.</p>
-								<p>Previously, I built distributed document extraction pipelines leveraging deep learning and OCR at <strong>Prorigo Software</strong>, and containerized enterprise NLP query engines using Docker and LangChain at <strong>Toshiba Mitsubishi-EIC India</strong>. I graduated with a Bachelor of Technology in Computer Science and Engineering from <strong>Vellore Institute of Technology (VIT)</strong>.</p>
-								<ul class="actions">
-									<li><a href="resume.pdf" target="_blank" class="button primary icon solid fa-file-pdf">View Resume</a></li>
-									<li><a href="#contact" class="button icon solid fa-envelope">Get In Touch</a></li>
-								</ul>
-							</article>
+								<div class="profile-telemetry">
+									<div class="telemetry-item">
+										<span class="telemetry-label">CURRENT ROLE</span>
+										<span class="telemetry-val">Deloitte (Data Eng)</span>
+									</div>
+									<div class="telemetry-item">
+										<span class="telemetry-label">DAILY THROUGHPUT</span>
+										<span class="telemetry-val" style="color:var(--accent-cyan)">5TB+ Financial Data</span>
+									</div>
+									<div class="telemetry-item">
+										<span class="telemetry-label">PIPELINE SLA</span>
+										<span class="telemetry-val" style="color:var(--accent-emerald)">99.9% Accuracy</span>
+									</div>
+									<div class="telemetry-item">
+										<span class="telemetry-label">EDUCATION</span>
+										<span class="telemetry-val">VIT Vellore (8.68)</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
 
-						<!-- Experience -->
-							<article id="experience">
-								<h2 class="major">Professional Experience</h2>
-								
-								<h3 class="role-title">Data Associate Engineer</h3>
-								<h4 class="sub-meta">Deloitte &bull; Sept. 2025 &ndash; Present &bull; Hyderabad, India</h4>
-								<ul>
-									<li>Architected high-throughput ELT pipelines using <strong>dbt, Snowflake, and Databricks</strong> to integrate enterprise ERP systems (SAP, Oracle), establishing a centralized lakehouse architecture for <strong>150+ cross-functional teams</strong>.</li>
+					<!-- Live Animated Impact Metrics Strip -->
+					<div class="metrics-strip reveal">
+						<div class="metric-card">
+							<div class="metric-value" data-count="5" data-suffix="TB+">5TB+</div>
+							<div class="metric-label">Daily Financial Records</div>
+							<div class="metric-context">Fault-Tolerant ELT @ Deloitte</div>
+						</div>
+						<div class="metric-card">
+							<div class="metric-value" data-count="65" data-suffix="%">65%</div>
+							<div class="metric-label">Pipeline Latency Cut</div>
+							<div class="metric-context">AWS &amp; Cluster Compute Tuning</div>
+						</div>
+						<div class="metric-card">
+							<div class="metric-value" data-prefix="$" data-count="45" data-suffix="K+">$45K+</div>
+							<div class="metric-label">Annual Cloud Spend Saved</div>
+							<div class="metric-context">On-Prem to AWS Migration</div>
+						</div>
+						<div class="metric-card">
+							<div class="metric-value" data-count="99.9" data-decimals="1" data-suffix="%">99.9%</div>
+							<div class="metric-label">End-to-End Data Accuracy</div>
+							<div class="metric-context">Automated Validation Checks</div>
+						</div>
+						<div class="metric-card">
+							<div class="metric-value" data-count="150" data-suffix="+">150+</div>
+							<div class="metric-label">Cross-Functional Teams</div>
+							<div class="metric-context">Centralized Lakehouse Consumers</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- =================================================================
+			     INTERACTIVE LAKEHOUSE PIPELINE ARCHITECTURE SIMULATOR
+			     ================================================================= -->
+			<section id="architecture">
+				<div class="container">
+					<div class="section-header reveal">
+						<div class="section-eyebrow">
+							<i class="fas fa-network-wired"></i>
+							<span>Interactive System Blueprint</span>
+						</div>
+						<h2 class="section-title">Production <span class="gradient-text">Data Architectures</span></h2>
+						<p class="section-subtitle">
+							Select a production system below and click any pipeline stage to inspect the data flow, compute optimizations, and engineering benchmarks.
+						</p>
+					</div>
+
+					<div class="arch-panel reveal">
+						<div class="arch-tabs">
+							<button type="button" class="arch-tab active" data-arch="deloitte">
+								<i class="fas fa-layer-group"></i>
+								<span>1. Enterprise ERP Lakehouse (Deloitte)</span>
+							</button>
+							<button type="button" class="arch-tab" data-arch="audit">
+								<i class="fas fa-shield-alt"></i>
+								<span>2. Zero-Ingress Audit Data Lake (DuckDB + Local LLMs)</span>
+							</button>
+							<button type="button" class="arch-tab" data-arch="market">
+								<i class="fas fa-bolt"></i>
+								<span>3. Real-Time Market Intelligence Stream (Airflow + Redis)</span>
+							</button>
+						</div>
+
+						<!-- Dynamic 4-Stage Pipeline Nodes -->
+						<div class="pipeline-flow" id="pipeline-flow"></div>
+
+						<!-- Stage Deep-Dive Inspector -->
+						<div class="arch-inspector">
+							<div>
+								<div class="inspector-title" id="inspector-title"></div>
+								<p class="inspector-detail" id="inspector-detail"></p>
+							</div>
+							<div class="inspector-metrics">
+								<div class="inspector-stat">
+									<div class="inspector-stat-val" id="inspector-stat1-val"></div>
+									<div class="inspector-stat-lbl" id="inspector-stat1-lbl"></div>
+								</div>
+								<div class="inspector-stat">
+									<div class="inspector-stat-val" id="inspector-stat2-val"></div>
+									<div class="inspector-stat-lbl" id="inspector-stat2-lbl"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- =================================================================
+			     PROFESSIONAL EXPERIENCE TIMELINE
+			     ================================================================= -->
+			<section id="experience">
+				<div class="container">
+					<div class="section-header reveal">
+						<div class="section-eyebrow">
+							<i class="fas fa-briefcase"></i>
+							<span>Career Trajectory</span>
+						</div>
+						<h2 class="section-title">Professional <span class="gradient-text">Experience</span></h2>
+						<p class="section-subtitle">
+							Delivering production data platforms, distributed cloud migrations, and intelligent automation across enterprise environments.
+						</p>
+					</div>
+
+					<div class="timeline">
+						<!-- 1. Deloitte -->
+						<div class="timeline-item reveal">
+							<div class="timeline-dot"></div>
+							<div class="exp-card">
+								<div class="exp-header">
+									<div>
+										<h3 class="exp-role">Data Associate Engineer</h3>
+										<div class="exp-company">
+											<i class="fas fa-building"></i>
+											<span>Deloitte</span>
+										</div>
+									</div>
+									<div class="exp-meta">
+										<span class="exp-badge-current">● CURRENT ROLE</span>
+										<div>Sept. 2025 &ndash; Present</div>
+										<div>Hyderabad, India</div>
+									</div>
+								</div>
+
+								<div class="exp-kpi-row">
+									<span class="kpi-pill"><i class="fas fa-users"></i> 150+ Teams Served</span>
+									<span class="kpi-pill"><i class="fas fa-tachometer-alt"></i> -65% Pipeline Latency</span>
+									<span class="kpi-pill"><i class="fas fa-dollar-sign"></i> $45,000+ Annual Cloud Saved</span>
+									<span class="kpi-pill"><i class="fas fa-database"></i> 5TB+ Daily Volume</span>
+									<span class="kpi-pill"><i class="fas fa-check-double"></i> 99.9% Data Accuracy</span>
+									<span class="kpi-pill"><i class="fas fa-clock"></i> 20+ hrs/wk Reclaimed</span>
+								</div>
+
+								<ul class="exp-bullets">
+									<li>Architected high-throughput ELT pipelines using <strong>dbt, Snowflake, and Databricks</strong> to integrate enterprise ERP systems (<strong>SAP, Oracle</strong>), establishing a centralized lakehouse architecture for <strong>150+ cross-functional teams</strong>.</li>
 									<li>Spearheaded migration of legacy on-premise workloads to <strong>AWS cloud architecture</strong>, tuning cluster compute to reduce pipeline latency by <strong>65%</strong> and saving <strong>$45,000+</strong> in recurring annual cloud spend.</li>
-									<li>Engineered fault-tolerant data pipelines processing <strong>5TB+</strong> of financial records daily with automated validation checks, raising end-to-end data accuracy to <strong>99.9%</strong>.</li>
+									<li>Engineered fault-tolerant data pipelines processing <strong>5TB+ of financial records daily</strong> with automated validation checks, raising end-to-end data accuracy to <strong>99.9%</strong>.</li>
 									<li>Built optimized <strong>Power BI semantic models</strong> backed by dimensional data marts, eliminating manual analyst reporting and reclaiming <strong>20+ stakeholder hours per week</strong>.</li>
 								</ul>
-								
-								<h3 class="role-title">Python Developer (Internship)</h3>
-								<h4 class="sub-meta">Prorigo Software &bull; Jan. 2025 &ndash; June 2025 &bull; Pune, India</h4>
-								<ul>
+
+								<ul class="tech-pills">
+									<li>Databricks</li>
+									<li>PySpark</li>
+									<li>Snowflake</li>
+									<li>dbt</li>
+									<li>AWS (S3, Redshift, EC2)</li>
+									<li>Delta Lake</li>
+									<li>SAP &amp; Oracle ERP</li>
+									<li>Power BI</li>
+									<li>Dimensional Data Marts</li>
+								</ul>
+							</div>
+						</div>
+
+						<!-- 2. Prorigo Software -->
+						<div class="timeline-item reveal">
+							<div class="timeline-dot"></div>
+							<div class="exp-card">
+								<div class="exp-header">
+									<div>
+										<h3 class="exp-role">Python Developer (Internship)</h3>
+										<div class="exp-company">
+											<i class="fas fa-code-branch"></i>
+											<span>Prorigo Software</span>
+										</div>
+									</div>
+									<div class="exp-meta">
+										<div>Jan. 2025 &ndash; June 2025</div>
+										<div>Pune, India</div>
+									</div>
+								</div>
+
+								<div class="exp-kpi-row">
+									<span class="kpi-pill"><i class="fas fa-bullseye"></i> 98% Extraction Accuracy</span>
+									<span class="kpi-pill"><i class="fas fa-hourglass-half"></i> 500+ Manual Hours/Month Eliminated</span>
+								</div>
+
+								<ul class="exp-bullets">
 									<li>Developed a distributed extraction pipeline leveraging <strong>OCR and deep learning</strong>, yielding <strong>98% extraction accuracy</strong> and eliminating <strong>500+ hours</strong> of manual entry per month.</li>
 								</ul>
-								
-								<h3 class="role-title">AI Developer (Internship)</h3>
-								<h4 class="sub-meta">Toshiba Mitsubishi-EIC India &bull; Aug. 2023 &ndash; Oct. 2023 &bull; Hyderabad, India</h4>
-								<ul>
-									<li>Containerized an enterprise NLP query engine using <strong>Docker and LangChain</strong> with automated CI/CD deployments, driving an <strong>83% reduction</strong> in IT ticket resolution turnaround.</li>
-								</ul>
-							</article>
 
-						<!-- Projects -->
-							<article id="projects">
-								<h2 class="major">Key Engineering Projects</h2>
-								
-								<h3>Enterprise Audit Data Lake</h3>
-								<ul class="tag-list">
+								<ul class="tech-pills">
 									<li>Python</li>
-									<li>DuckDB</li>
-									<li>Databricks</li>
-									<li>AWS S3</li>
-									<li>Docker</li>
+									<li>Distributed Pipelines</li>
+									<li>OCR</li>
+									<li>Deep Learning</li>
+									<li>Automated Document Parsing</li>
 								</ul>
-								<ul>
+							</div>
+						</div>
+
+						<!-- 3. Toshiba Mitsubishi-EIC India -->
+						<div class="timeline-item reveal">
+							<div class="timeline-dot"></div>
+							<div class="exp-card">
+								<div class="exp-header">
+									<div>
+										<h3 class="exp-role">AI Developer (Internship)</h3>
+										<div class="exp-company">
+											<i class="fas fa-microchip"></i>
+											<span>Toshiba Mitsubishi-EIC India</span>
+										</div>
+									</div>
+									<div class="exp-meta">
+										<div>Aug. 2023 &ndash; Oct. 2023</div>
+										<div>Hyderabad, India</div>
+									</div>
+								</div>
+
+								<div class="exp-kpi-row">
+									<span class="kpi-pill"><i class="fas fa-bolt"></i> 83% Faster Ticket Turnaround</span>
+									<span class="kpi-pill"><i class="fab fa-docker"></i> Containerized CI/CD Deployment</span>
+								</div>
+
+								<ul class="exp-bullets">
+									<li>Containerized an enterprise <strong>NLP query engine</strong> using <strong>Docker and LangChain</strong> with automated <strong>CI/CD deployments</strong>, driving an <strong>83% reduction</strong> in IT ticket resolution turnaround.</li>
+								</ul>
+
+								<ul class="tech-pills">
+									<li>Docker</li>
+									<li>LangChain</li>
+									<li>Python</li>
+									<li>CI/CD (GitHub Actions)</li>
+									<li>Enterprise NLP</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- =================================================================
+			     KEY ENGINEERING PROJECTS & RESEARCH BENTO GRID
+			     ================================================================= -->
+			<section id="projects">
+				<div class="container">
+					<div class="section-header reveal">
+						<div class="section-eyebrow">
+							<i class="fas fa-cubes"></i>
+							<span>Systems &amp; Research</span>
+						</div>
+						<h2 class="section-title">Key Engineering <span class="gradient-text">Projects</span></h2>
+						<p class="section-subtitle">
+							High-performance data lakes, real-time Airflow streaming engines, and peer-reviewed research.
+						</p>
+					</div>
+
+					<div class="filter-bar reveal">
+						<button type="button" class="filter-btn active" data-filter="all">All Systems (5)</button>
+						<button type="button" class="filter-btn" data-filter="lakehouse">Data Lakehouse &amp; OLAP</button>
+						<button type="button" class="filter-btn" data-filter="streaming">Streaming &amp; Airflow</button>
+						<button type="button" class="filter-btn" data-filter="ai-llm">AI &amp; LLM Engines</button>
+						<button type="button" class="filter-btn" data-filter="research">Published Research</button>
+					</div>
+
+					<div class="projects-grid">
+						<!-- Featured 1: Enterprise Audit Data Lake -->
+						<article class="project-card featured reveal" data-category="lakehouse ai-llm">
+							<div>
+								<div class="project-top">
+									<div class="project-icon"><i class="fas fa-database"></i></div>
+									<span class="project-category-tag">Lakehouse &amp; Local OLAP</span>
+								</div>
+								<h3 class="project-title">Enterprise Audit Data Lake</h3>
+
+								<div class="project-metrics-bar">
+									<div class="proj-metric">
+										<strong>5M+ Rows</strong>
+										<span>Confidential Financial Records</span>
+									</div>
+									<div class="proj-metric">
+										<strong>-60% Latency</strong>
+										<span>$0 Cloud Ingress Cost</span>
+									</div>
+								</div>
+
+								<ul class="project-bullets">
 									<li>Engineered an isolated, local-compute processing engine using <strong>DuckDB and local LLMs</strong> to parse <strong>5M+ rows</strong> of confidential financial transactions.</li>
 									<li>Implemented containerized microservices for anomaly detection, eliminating cloud data ingress costs and reducing query latency by <strong>60%</strong>.</li>
 								</ul>
-								
-								<h3>Real-Time Market Intelligence Engine</h3>
-								<ul class="tag-list">
-									<li>Python</li>
-									<li>Apache Airflow</li>
-									<li>REST APIs</li>
-									<li>Redis</li>
-								</ul>
-								<ul>
+							</div>
+
+							<ul class="tech-pills">
+								<li>Python</li>
+								<li>DuckDB</li>
+								<li>Databricks</li>
+								<li>AWS S3</li>
+								<li>Docker</li>
+								<li>Local LLMs</li>
+							</ul>
+						</article>
+
+						<!-- Featured 2: Real-Time Market Intelligence Engine -->
+						<article class="project-card featured reveal" data-category="streaming">
+							<div>
+								<div class="project-top">
+									<div class="project-icon"><i class="fas fa-stream"></i></div>
+									<span class="project-category-tag">Airflow &amp; Redis Streaming</span>
+								</div>
+								<h3 class="project-title">Real-Time Market Intelligence Engine</h3>
+
+								<div class="project-metrics-bar">
+									<div class="proj-metric">
+										<strong>1,000+ Daily</strong>
+										<span>Continuous Streaming Listings</span>
+									</div>
+									<div class="proj-metric">
+										<strong>300% Spike</strong>
+										<span>Sub-Second Redis Response</span>
+									</div>
+								</div>
+
+								<ul class="project-bullets">
 									<li>Deployed an automated data ingestion platform orchestrated with <strong>Apache Airflow</strong>, streaming continuous updates across <strong>1,000+ daily listings</strong>.</li>
 									<li>Integrated <strong>Redis caching layer</strong> and indexed querying patterns, sustaining a <strong>300% concurrent traffic spike</strong> with sub-second response times.</li>
 								</ul>
+							</div>
 
-								<hr class="section-divider" />
+							<ul class="tech-pills">
+								<li>Python</li>
+								<li>Apache Airflow</li>
+								<li>REST APIs</li>
+								<li>Redis</li>
+								<li>Indexed Querying</li>
+							</ul>
+						</article>
 
-								<h3 class="major">Research Publication</h3>
-								<h4>A Comparative Analysis of Web 3.0, Web 2.0, and Web 1.0</h4>
-								<h5 class="sub-meta">Inderscience Publishers</h5>
-								<ul>
-									<li>Authored and published a comparative research study analyzing architectural paradigms, decentralized mechanisms, and systemic evolutions across Web generations.</li>
-								</ul>
-
-								<hr class="section-divider" />
-
-								<h3 class="major">Additional Featured Projects</h3>
-								
-								<h4>SQLTranslator</h4>
-								<ul class="tag-list">
-									<li>Google PaLM</li>
-									<li>LangChain</li>
-									<li>Hugging Face</li>
-									<li>Streamlit</li>
-								</ul>
-								<p>A natural-language to SQL translation engine that converts conversational queries into executable SQL statements, enabling non-technical users to query relational databases effortlessly.</p>
-								
-								<h4>URL2Email</h4>
-								<ul class="tag-list">
-									<li>LLaMA 3.1</li>
-									<li>ChromaDB</li>
-									<li>LangChain</li>
-									<li>Streamlit</li>
-								</ul>
-								<p>An automated outreach tool that scrapes web job descriptions from URLs and leverages open-source LLMs to synthesize targeted, high-conversion cold emails.</p>
-							</article>
-
-						<!-- Skills -->
-							<article id="skills">
-								<h2 class="major">Technical Expertise</h2>
-								
-								<h3>Data Engineering &amp; Cloud</h3>
-								<ul class="tag-list">
-									<li>Databricks</li>
-									<li>PySpark</li>
-									<li>AWS (S3, Redshift, EC2)</li>
-									<li>Snowflake</li>
-									<li>dbt</li>
-									<li>Apache Airflow</li>
-									<li>Apache Kafka</li>
-									<li>Delta Lake</li>
-									<li>Star/Snowflake Schema</li>
-								</ul>
-
-								<h3>Languages &amp; Storage</h3>
-								<ul class="tag-list">
-									<li>Python</li>
-									<li>SQL</li>
-									<li>DuckDB</li>
-									<li>Redis</li>
-									<li>FastAPI</li>
-									<li>Streamlit</li>
-								</ul>
-
-								<h3>DevOps &amp; Infrastructure</h3>
-								<ul class="tag-list">
-									<li>Docker</li>
-									<li>Terraform</li>
-									<li>CI/CD (GitHub Actions)</li>
-									<li>Microservices Architecture</li>
-								</ul>
-
-								<h3>Enterprise Systems &amp; BI</h3>
-								<ul class="tag-list">
-									<li>SAP</li>
-									<li>Oracle ERP</li>
-									<li>Power BI</li>
-									<li>Tableau</li>
-									<li>Automated Data Quality Frameworks</li>
-								</ul>
-								
-								<hr class="section-divider" />
-
-								<h3 class="major">Certifications</h3>
-								<div class="highlight-box">
-									<h4>AWS Certified Solutions Architect &ndash; Associate</h4>
-									<p class="sub-meta">Amazon Web Services &bull; Dec. 2025</p>
-									<p>Comprehensive validation of technical expertise in designing distributed, cost-optimized, decoupled, and highly available architectures on AWS.</p>
+						<!-- Compact 3: Research Publication -->
+						<article class="project-card compact reveal" data-category="research">
+							<div>
+								<div class="project-top">
+									<div class="project-icon"><i class="fas fa-book-open"></i></div>
+									<span class="project-category-tag">Inderscience Publication</span>
 								</div>
-
-								<ul class="alt">
-									<li><strong>Entrepreneurship</strong> &bull; IIT Madras</li>
-									<li><strong>Forests and Their Management</strong> &bull; IIT Kanpur</li>
-									<li><strong>Wildlife Ecology</strong> &bull; IIT Kanpur</li>
+								<h3 class="project-title">A Comparative Analysis of Web 3.0, Web 2.0, and Web 1.0</h3>
+								<ul class="project-bullets">
+									<li>Published peer-reviewed research in <strong>Inderscience Publishers</strong> analyzing decentralized architectures, consensus protocols, and web evolution.</li>
 								</ul>
-							</article>
+							</div>
+							<ul class="tech-pills">
+								<li>Distributed Systems</li>
+								<li>Web 3.0 Architecture</li>
+								<li>Inderscience</li>
+							</ul>
+						</article>
 
-						<!-- Education -->
-							<article id="education">
-								<h2 class="major">Education &amp; Leadership</h2>
-								
-								<h3>Vellore Institute of Technology (VIT), Vellore</h3>
-								<h4 class="sub-meta">July 2021 &ndash; July 2025 &bull; Vellore, India</h4>
-								<p><strong>Bachelor of Technology in Computer Science and Engineering</strong><br />
-								<strong>CGPA:</strong> 8.68 / 10.0</p>
-								
-								<hr class="section-divider" />
-
-								<h3 class="major">Leadership</h3>
-								<h4>Manager (Sports, Finance &amp; Stalls) &ndash; Riviera '23</h4>
-								<h5 class="sub-meta">VIT International Cultural and Sports Festival</h5>
-								<ul>
-									<li>Managed end-to-end festival operations, vendor stalls, and financial budgeting for one of India's largest annual international college festivals.</li>
+						<!-- Compact 4: SQLTranslator -->
+						<article class="project-card compact reveal" data-category="ai-llm">
+							<div>
+								<div class="project-top">
+									<div class="project-icon"><i class="fas fa-terminal"></i></div>
+									<span class="project-category-tag">NL2SQL Engine</span>
+								</div>
+								<h3 class="project-title">SQLTranslator</h3>
+								<ul class="project-bullets">
+									<li>Natural-language to SQL engine converting human queries into executable relational database statements using embeddings and semantic retrieval.</li>
 								</ul>
+							</div>
+							<ul class="tech-pills">
+								<li>Python</li>
+								<li>SQL</li>
+								<li>LangChain</li>
+								<li>Hugging Face</li>
+								<li>Streamlit</li>
+							</ul>
+						</article>
 
-								<hr class="section-divider" />
-
-								<h3 class="major">Honors &amp; Awards</h3>
-								<p><strong>Maharashtra Science Talent Search Exam (MSTSE) 2019</strong> &ndash; State Rank 59th</p>
-							</article>
-
-						<!-- Contact -->
-							<article id="contact">
-								<h2 class="major">Contact</h2>
-								<form action="https://api.web3forms.com/submit" method="POST">
-									<div class="fields">
-										<div class="field half">
-											<label for="name">Name</label>
-											<input type="text" name="name" id="name" required />
-										</div>
-										<div class="field half">
-											<label for="email">Email</label>
-											<input type="text" name="email" id="email" required />
-										</div>
-										<div class="field">
-											<label for="message">Message</label>
-											<textarea name="message" id="message" rows="4" required></textarea>
-										</div>
-									</div>
-									<ul class="actions">
-										<input type="hidden" name="access_key" value="c7dae0dd-3f06-4aa6-a2ce-48b049139a5b">
-										<li><input type="submit" value="Send Message" class="primary" /></li>
-										<li><input type="reset" value="Reset" /></li>
-									</ul>
-								</form>
-								<ul class="icons">
-									<li><a href="https://linkedin.com/in/suvin-singh" target="_blank" rel="noopener noreferrer" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
-									<li><a href="https://github.com/prosuvinhere" target="_blank" rel="noopener noreferrer" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-									<li><a href="mailto:suvinsingh.work@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
-									<li><a href="resume.pdf" target="_blank" class="icon solid fa-file-pdf"><span class="label">Resume</span></a></li>
+						<!-- Compact 5: URL2Email -->
+						<article class="project-card compact reveal" data-category="ai-llm">
+							<div>
+								<div class="project-top">
+									<div class="project-icon"><i class="fas fa-paper-plane"></i></div>
+									<span class="project-category-tag">Vector RAG Pipeline</span>
+								</div>
+								<h3 class="project-title">URL2Email</h3>
+								<ul class="project-bullets">
+									<li>Automated scraping and vector-retrieval pipeline that extracts job requirements from URLs to synthesize tailored outreach with LLaMA 3.1.</li>
 								</ul>
-								<p>
-									<strong>Email:</strong> <a href="mailto:suvinsingh.work@gmail.com">suvinsingh.work@gmail.com</a><br />
-									<strong>Phone:</strong> <a href="tel:+918830545823">+91-8830545823</a><br />
-									<strong>LinkedIn:</strong> <a href="https://linkedin.com/in/suvin-singh" target="_blank" rel="noopener noreferrer">linkedin.com/in/suvin-singh</a><br />
-									<strong>GitHub:</strong> <a href="https://github.com/prosuvinhere" target="_blank" rel="noopener noreferrer">github.com/prosuvinhere</a><br />
-									<strong>Mentorship:</strong> <a href="https://topmate.io/suvin_singh" target="_blank" rel="noopener noreferrer">topmate.io/suvin_singh</a><br />
-									<strong>Resume:</strong> <a href="resume.pdf" target="_blank">Download PDF</a>
-								</p>
-							</article>
+							</div>
+							<ul class="tech-pills">
+								<li>LLaMA 3.1</li>
+								<li>ChromaDB</li>
+								<li>LangChain</li>
+								<li>Streamlit</li>
+							</ul>
+						</article>
+					</div>
+				</div>
+			</section>
 
+			<!-- =================================================================
+			     TECHNICAL EXPERTISE & INTERACTIVE SKILL MATRIX
+			     ================================================================= -->
+			<section id="skills">
+				<div class="container">
+					<div class="section-header reveal">
+						<div class="section-eyebrow">
+							<i class="fas fa-sliders-h"></i>
+							<span>Core Stack</span>
+						</div>
+						<h2 class="section-title">Technical <span class="gradient-text">Expertise</span></h2>
+						<p class="section-subtitle">
+							Click any engineering domain on the left to inspect production tools, role context, and ecosystem depth.
+						</p>
 					</div>
 
-				<!-- Footer -->
-					<footer id="footer">
-						<p class="copyright">&copy; 2026 Suvin Singh. All rights reserved.</p>
-					</footer>
+					<div class="skills-layout reveal">
+						<div class="skill-domains">
+							<div class="domain-card active" data-domain="data-cloud">
+								<div class="domain-header">
+									<div class="domain-title">
+										<i class="fas fa-cloud"></i>
+										<span>Data Engineering &amp; Cloud</span>
+									</div>
+									<span class="domain-count">9 Core Technologies</span>
+								</div>
+								<div class="domain-summary">
+									Databricks, PySpark, AWS (S3, Redshift, EC2), Snowflake, dbt, Apache Airflow, Apache Kafka, Delta Lake, Star/Snowflake Schema
+								</div>
+							</div>
 
+							<div class="domain-card" data-domain="lang-storage">
+								<div class="domain-header">
+									<div class="domain-title">
+										<i class="fas fa-code"></i>
+										<span>Languages &amp; Storage</span>
+									</div>
+									<span class="domain-count">6 Core Technologies</span>
+								</div>
+								<div class="domain-summary">
+									Python, SQL, DuckDB, Redis, FastAPI, Streamlit
+								</div>
+							</div>
+
+							<div class="domain-card" data-domain="devops-infra">
+								<div class="domain-header">
+									<div class="domain-title">
+										<i class="fas fa-server"></i>
+										<span>DevOps &amp; Infrastructure</span>
+									</div>
+									<span class="domain-count">4 Core Technologies</span>
+								</div>
+								<div class="domain-summary">
+									Docker, Terraform, CI/CD (GitHub Actions), Microservices Architecture
+								</div>
+							</div>
+
+							<div class="domain-card" data-domain="enterprise-bi">
+								<div class="domain-header">
+									<div class="domain-title">
+										<i class="fas fa-chart-pie"></i>
+										<span>Enterprise Systems &amp; BI</span>
+									</div>
+									<span class="domain-count">5 Core Technologies</span>
+								</div>
+								<div class="domain-summary">
+									SAP, Oracle ERP, Power BI, Tableau, Automated Data Quality Frameworks
+								</div>
+							</div>
+						</div>
+
+						<div class="skills-showcase">
+							<div class="skill-bars-grid" id="skill-bars-container"></div>
+
+							<div class="all-skills-cloud">
+								<span class="cloud-chip" data-domain="data-cloud">Databricks</span>
+								<span class="cloud-chip" data-domain="data-cloud">PySpark</span>
+								<span class="cloud-chip" data-domain="data-cloud">AWS S3</span>
+								<span class="cloud-chip" data-domain="data-cloud">AWS Redshift</span>
+								<span class="cloud-chip" data-domain="data-cloud">AWS EC2</span>
+								<span class="cloud-chip" data-domain="data-cloud">Snowflake</span>
+								<span class="cloud-chip" data-domain="data-cloud">dbt</span>
+								<span class="cloud-chip" data-domain="data-cloud">Apache Airflow</span>
+								<span class="cloud-chip" data-domain="data-cloud">Apache Kafka</span>
+								<span class="cloud-chip" data-domain="data-cloud">Delta Lake</span>
+								<span class="cloud-chip" data-domain="data-cloud">Star/Snowflake Schema</span>
+								<span class="cloud-chip" data-domain="lang-storage">Python</span>
+								<span class="cloud-chip" data-domain="lang-storage">SQL</span>
+								<span class="cloud-chip" data-domain="lang-storage">DuckDB</span>
+								<span class="cloud-chip" data-domain="lang-storage">Redis</span>
+								<span class="cloud-chip" data-domain="lang-storage">FastAPI</span>
+								<span class="cloud-chip" data-domain="lang-storage">Streamlit</span>
+								<span class="cloud-chip" data-domain="devops-infra">Docker</span>
+								<span class="cloud-chip" data-domain="devops-infra">Terraform</span>
+								<span class="cloud-chip" data-domain="devops-infra">CI/CD (GitHub Actions)</span>
+								<span class="cloud-chip" data-domain="devops-infra">Microservices</span>
+								<span class="cloud-chip" data-domain="enterprise-bi">SAP ERP</span>
+								<span class="cloud-chip" data-domain="enterprise-bi">Oracle ERP</span>
+								<span class="cloud-chip" data-domain="enterprise-bi">Power BI</span>
+								<span class="cloud-chip" data-domain="enterprise-bi">Tableau</span>
+								<span class="cloud-chip" data-domain="enterprise-bi">Data Quality Frameworks</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- =================================================================
+			     INTERACTIVE LAKEHOUSE SQL & CLI PLAYGROUND
+			     ================================================================= -->
+			<section id="terminal">
+				<div class="container">
+					<div class="section-header reveal">
+						<div class="section-eyebrow">
+							<i class="fas fa-terminal"></i>
+							<span>Interactive Query Engine</span>
+						</div>
+						<h2 class="section-title">Query My <span class="gradient-text">Lakehouse Console</span></h2>
+						<p class="section-subtitle">
+							Click any preset query below or type commands (<code>help</code>, <code>skills</code>, <code>SELECT * FROM experience;</code>, <code>resume</code>) to query my career dataset in real time.
+						</p>
+					</div>
+
+					<div class="terminal-window reveal">
+						<div class="terminal-header">
+							<div class="terminal-dots">
+								<span class="t-dot red"></span>
+								<span class="t-dot yellow"></span>
+								<span class="t-dot green"></span>
+							</div>
+							<div class="terminal-title">suvin_singh@snowflake-lakehouse-xl: ~/portfolio-cli (v2.6)</div>
+							<div style="font-family:var(--font-mono);font-size:0.72rem;color:var(--accent-emerald)">● WAREHOUSE ACTIVE</div>
+						</div>
+
+						<div class="terminal-presets">
+							<span class="preset-label">Quick Queries:</span>
+							<button type="button" class="preset-query-btn" data-query="SELECT * FROM experience;">SELECT * FROM experience;</button>
+							<button type="button" class="preset-query-btn" data-query="SELECT * FROM projects;">SELECT * FROM projects;</button>
+							<button type="button" class="preset-query-btn" data-query="aws --certifications">aws --certifications</button>
+							<button type="button" class="preset-query-btn" data-query="skills">skills</button>
+							<button type="button" class="preset-query-btn" data-query="education">education</button>
+							<button type="button" class="preset-query-btn" data-query="contact">contact</button>
+							<button type="button" class="preset-query-btn" data-query="clear">clear</button>
+						</div>
+
+						<div class="terminal-body" id="terminal-body">
+							<div class="terminal-output-block">
+								<div style="color:var(--accent-emerald)">Connected to Suvin Singh's Distributed Portfolio Lakehouse (DuckDB + Snowflake CLI).</div>
+								<div style="color:var(--text-secondary)">Type <span style="color:var(--accent-cyan)">help</span> or click any preset SQL query above to inspect experience, metrics, and certifications.</div>
+							</div>
+							<div class="terminal-output-block">
+								<div class="cmd-echo">suvin@lakehouse:~$ SELECT * FROM experience;</div>
+								<table class="sql-table">
+									<thead>
+										<tr><th>COMPANY</th><th>ROLE</th><th>PERIOD</th><th>KEY_IMPACT</th></tr>
+									</thead>
+									<tbody>
+										<tr><td>Deloitte</td><td>Data Associate Engineer</td><td>Sept 2025 – Present</td><td>5TB+/day ELT, -65% latency, $45k+ saved, 99.9% accuracy</td></tr>
+										<tr><td>Prorigo Software</td><td>Python Developer (Intern)</td><td>Jan 2025 – June 2025</td><td>98% OCR accuracy, 500+ manual hrs/mo eliminated</td></tr>
+										<tr><td>Toshiba Mitsubishi-EIC</td><td>AI Developer (Intern)</td><td>Aug 2023 – Oct 2023</td><td>Docker + LangChain NLP engine, -83% ticket turnaround</td></tr>
+									</tbody>
+								</table>
+								<div class="cmd-meta">✓ 3 rows returned in 0.008s (Snowflake Warehouse: COMPUTE_WH_XL)</div>
+							</div>
+						</div>
+
+						<div class="terminal-input-row">
+							<span class="prompt-prefix">suvin@lakehouse:~$</span>
+							<input type="text" id="terminal-input" placeholder="Type a SQL query or command (e.g., skills, projects, aws, help) and press Enter..." autocomplete="off" />
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- =================================================================
+			     EDUCATION, CERTIFICATIONS & LEADERSHIP BENTO
+			     ================================================================= -->
+			<section id="credentials">
+				<div class="container">
+					<div class="section-header reveal">
+						<div class="section-eyebrow">
+							<i class="fas fa-award"></i>
+							<span>Academic &amp; Industry Credentials</span>
+						</div>
+						<h2 class="section-title">Certifications, <span class="gradient-text">Education &amp; Leadership</span></h2>
+					</div>
+
+					<div class="credentials-grid">
+						<!-- Card 1: AWS Certification -->
+						<div class="cred-card reveal">
+							<div class="cred-icon" style="color:var(--accent-amber);border-color:rgba(245,158,11,0.35);background:rgba(245,158,11,0.12)">
+								<i class="fab fa-aws"></i>
+							</div>
+							<div class="cred-sub">AMAZON WEB SERVICES &bull; DEC. 2025</div>
+							<h3>AWS Certified Solutions Architect &ndash; Associate</h3>
+							<p style="color:var(--text-secondary);font-size:0.9rem;margin-top:10px">
+								Validated expertise in designing distributed, cost-optimized, fault-tolerant, and scalable cloud architectures across AWS S3, Redshift, EC2, VPC, and lakehouse ecosystems.
+							</p>
+							<div style="margin-top:16px;padding-top:14px;border-top:1px solid var(--border-subtle);font-size:0.82rem;color:var(--text-secondary)">
+								<strong>Additional Certifications:</strong><br />
+								&bull; Entrepreneurship (IIT Madras)<br />
+								&bull; Forests &amp; Wildlife Ecology (IIT Kanpur)
+							</div>
+						</div>
+
+						<!-- Card 2: Education -->
+						<div class="cred-card reveal">
+							<div class="cred-icon">
+								<i class="fas fa-graduation-cap"></i>
+							</div>
+							<div class="cred-sub">JULY 2021 &ndash; JULY 2025 &bull; VELLORE, INDIA</div>
+							<h3>Vellore Institute of Technology (VIT), Vellore</h3>
+							<p style="color:var(--text-secondary);font-size:0.92rem;margin-top:8px">
+								<strong>Bachelor of Technology</strong> in Computer Science and Engineering.
+							</p>
+							<div class="cgpa-badge">
+								<i class="fas fa-star"></i>
+								<span>CGPA: 8.68 / 10.0</span>
+							</div>
+							<div style="margin-top:16px;padding-top:14px;border-top:1px solid var(--border-subtle);font-size:0.82rem;color:var(--text-secondary)">
+								<strong>Academic Honors:</strong><br />
+								&bull; Maharashtra Science Talent Search Exam (MSTSE) &ndash; State Rank 59th
+							</div>
+						</div>
+
+						<!-- Card 3: Leadership & Publications -->
+						<div class="cred-card reveal">
+							<div class="cred-icon" style="color:var(--accent-emerald);border-color:rgba(16,185,129,0.35);background:rgba(16,185,129,0.12)">
+								<i class="fas fa-users-cog"></i>
+							</div>
+							<div class="cred-sub">OPERATIONS &bull; FINANCE &bull; RESEARCH</div>
+							<h3>Leadership &amp; Publications</h3>
+							<p style="color:var(--text-secondary);font-size:0.9rem;margin-top:10px">
+								<strong>Manager (Sports, Finance &amp; Stalls) &ndash; Riviera ’23:</strong> Managed operations, vendor stalls, and financial budgeting for VIT’s annual international cultural and sports festival.
+							</p>
+							<p style="color:var(--text-secondary);font-size:0.9rem;margin-top:12px">
+								<strong>Research Publication (Inderscience):</strong> <em>A Comparative Analysis of Web 3.0, Web 2.0, and Web 1.0</em>.
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- =================================================================
+			     CONTACT SECTION
+			     ================================================================= -->
+			<section id="contact">
+				<div class="container">
+					<div class="section-header reveal">
+						<div class="section-eyebrow">
+							<i class="fas fa-paper-plane"></i>
+							<span>Direct Channels</span>
+						</div>
+						<h2 class="section-title">Let’s Build <span class="gradient-text">Scalable Data Systems</span></h2>
+						<p class="section-subtitle">
+							Reach out for data engineering roles, cloud architecture collaborations, or technical mentorship.
+						</p>
+					</div>
+
+					<div class="contact-grid reveal">
+						<div class="contact-info-card">
+							<h3 style="font-family:var(--font-display);font-size:1.35rem;margin-bottom:8px">Direct Contact Endpoints</h3>
+							<p style="color:var(--text-secondary);font-size:0.92rem">
+								Click to copy my email or phone number, or connect directly on LinkedIn and GitHub.
+							</p>
+
+							<div class="contact-method-list">
+								<div class="contact-method">
+									<div class="cm-left">
+										<div class="cm-icon"><i class="fas fa-envelope"></i></div>
+										<div>
+											<span class="cm-label">EMAIL ADDRESS</span>
+											<a href="mailto:suvinsingh.work@gmail.com" class="cm-val">suvinsingh.work@gmail.com</a>
+										</div>
+									</div>
+									<button type="button" class="copy-btn" onclick="copyText('suvinsingh.work@gmail.com', 'Email')">
+										<i class="far fa-copy"></i> Copy
+									</button>
+								</div>
+
+								<div class="contact-method">
+									<div class="cm-left">
+										<div class="cm-icon"><i class="fas fa-phone-alt"></i></div>
+										<div>
+											<span class="cm-label">PHONE</span>
+											<a href="tel:+918830545823" class="cm-val">+91-8830545823</a>
+										</div>
+									</div>
+									<button type="button" class="copy-btn" onclick="copyText('+91-8830545823', 'Phone number')">
+										<i class="far fa-copy"></i> Copy
+									</button>
+								</div>
+
+								<div class="contact-method">
+									<div class="cm-left">
+										<div class="cm-icon"><i class="fab fa-linkedin-in"></i></div>
+										<div>
+											<span class="cm-label">LINKEDIN</span>
+											<a href="https://linkedin.com/in/suvin-singh" target="_blank" rel="noopener noreferrer" class="cm-val">linkedin.com/in/suvin-singh</a>
+										</div>
+									</div>
+									<a href="https://linkedin.com/in/suvin-singh" target="_blank" rel="noopener noreferrer" class="copy-btn" style="text-decoration:none">
+										Open <i class="fas fa-external-link-alt"></i>
+									</a>
+								</div>
+
+								<div class="contact-method">
+									<div class="cm-left">
+										<div class="cm-icon"><i class="fab fa-github"></i></div>
+										<div>
+											<span class="cm-label">GITHUB</span>
+											<a href="https://github.com/prosuvinhere" target="_blank" rel="noopener noreferrer" class="cm-val">github.com/prosuvinhere</a>
+										</div>
+									</div>
+									<a href="https://github.com/prosuvinhere" target="_blank" rel="noopener noreferrer" class="copy-btn" style="text-decoration:none">
+										Open <i class="fas fa-external-link-alt"></i>
+									</a>
+								</div>
+
+								<div class="contact-method">
+									<div class="cm-left">
+										<div class="cm-icon"><i class="fas fa-user-friends"></i></div>
+										<div>
+											<span class="cm-label">1:1 MENTORSHIP</span>
+											<a href="https://topmate.io/suvin_singh" target="_blank" rel="noopener noreferrer" class="cm-val">topmate.io/suvin_singh</a>
+										</div>
+									</div>
+									<a href="https://topmate.io/suvin_singh" target="_blank" rel="noopener noreferrer" class="copy-btn" style="text-decoration:none">
+										Book <i class="fas fa-external-link-alt"></i>
+									</a>
+								</div>
+							</div>
+						</div>
+
+						<!-- Contact Form -->
+						<div class="contact-form-card">
+							<h3 style="font-family:var(--font-display);font-size:1.35rem;margin-bottom:8px">Send a Direct Message</h3>
+							<p style="color:var(--text-secondary);font-size:0.92rem;margin-bottom:22px">
+								Messages are routed directly to my inbox.
+							</p>
+
+							<form id="portfolio-contact-form" action="https://api.web3forms.com/submit" method="POST">
+								<input type="hidden" name="access_key" value="c7dae0dd-3f06-4aa6-a2ce-48b049139a5b" />
+								<div class="form-row">
+									<div class="form-group">
+										<label class="form-label" for="name">Your Name</label>
+										<input type="text" class="form-control" name="name" id="name" placeholder="Jane Doe" required />
+									</div>
+									<div class="form-group">
+										<label class="form-label" for="email">Your Email</label>
+										<input type="email" class="form-control" name="email" id="email" placeholder="jane@company.com" required />
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="form-label" for="message">Message</label>
+									<textarea class="form-control" name="message" id="message" rows="5" placeholder="Hi Suvin, I'd love to discuss a Data Engineering opportunity..." required></textarea>
+								</div>
+								<div style="display:flex;gap:12px;flex-wrap:wrap">
+									<button type="submit" class="btn btn-primary">
+										<i class="fas fa-paper-plane"></i>
+										<span>Send Message</span>
+									</button>
+									<button type="reset" class="btn btn-ghost">Reset</button>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<!-- Footer -->
+		<footer class="footer">
+			<div class="container">
+				<p>&copy; 2026 Suvin Singh &bull; Data Engineer &amp; AWS Certified Solutions Architect &bull; Built with Interactive Lakehouse Telemetry</p>
 			</div>
+		</footer>
 
-		<!-- BG -->
-			<div id="bg"></div>
+		<!-- =================================================================
+		     COMMAND PALETTE MODAL (⌘K / Ctrl+K)
+		     ================================================================= -->
+		<div class="modal-backdrop" id="cmd-backdrop">
+			<div class="cmd-modal" role="dialog" aria-label="Command Palette">
+				<div class="cmd-search-bar">
+					<i class="fas fa-search" style="color:var(--accent-cyan)"></i>
+					<input type="text" id="cmd-input" placeholder="Jump to section, copy email, or view resume..." autocomplete="off" />
+					<kbd style="font-family:var(--font-mono);font-size:0.72rem;color:var(--text-muted)">ESC</kbd>
+				</div>
+				<ul class="cmd-list">
+					<li class="cmd-item" data-action="resume">
+						<span><i class="fas fa-file-pdf" style="color:var(--accent-cyan);width:22px"></i> Open Interactive Resume Preview</span>
+						<span style="font-family:var(--font-mono);font-size:0.74rem">PDF</span>
+					</li>
+					<li class="cmd-item" data-action="scroll" data-target="#architecture">
+						<span><i class="fas fa-project-diagram" style="color:var(--accent-cyan);width:22px"></i> Explore Lakehouse Pipeline Architectures</span>
+						<span style="font-family:var(--font-mono);font-size:0.74rem">Section</span>
+					</li>
+					<li class="cmd-item" data-action="scroll" data-target="#experience">
+						<span><i class="fas fa-briefcase" style="color:var(--accent-cyan);width:22px"></i> View Professional Experience (Deloitte, Prorigo, Toshiba)</span>
+						<span style="font-family:var(--font-mono);font-size:0.74rem">Section</span>
+					</li>
+					<li class="cmd-item" data-action="scroll" data-target="#projects">
+						<span><i class="fas fa-cubes" style="color:var(--accent-cyan);width:22px"></i> View Key Engineering Projects &amp; Research</span>
+						<span style="font-family:var(--font-mono);font-size:0.74rem">Section</span>
+					</li>
+					<li class="cmd-item" data-action="scroll" data-target="#terminal">
+						<span><i class="fas fa-terminal" style="color:var(--accent-cyan);width:22px"></i> Launch Interactive Lakehouse SQL Terminal</span>
+						<span style="font-family:var(--font-mono);font-size:0.74rem">CLI</span>
+					</li>
+					<li class="cmd-item" data-action="copy-email">
+						<span><i class="fas fa-copy" style="color:var(--accent-emerald);width:22px"></i> Copy Email (suvinsingh.work@gmail.com)</span>
+						<span style="font-family:var(--font-mono);font-size:0.74rem">Clipboard</span>
+					</li>
+					<li class="cmd-item" data-action="copy-phone">
+						<span><i class="fas fa-phone" style="color:var(--accent-emerald);width:22px"></i> Copy Phone (+91-8830545823)</span>
+						<span style="font-family:var(--font-mono);font-size:0.74rem">Clipboard</span>
+					</li>
+					<li class="cmd-item" data-action="external" data-target="https://linkedin.com/in/suvin-singh">
+						<span><i class="fab fa-linkedin" style="color:var(--accent-cyan);width:22px"></i> Open LinkedIn Profile</span>
+						<span style="font-family:var(--font-mono);font-size:0.74rem">External</span>
+					</li>
+					<li class="cmd-item" data-action="external" data-target="https://github.com/prosuvinhere">
+						<span><i class="fab fa-github" style="color:var(--accent-cyan);width:22px"></i> Open GitHub Profile</span>
+						<span style="font-family:var(--font-mono);font-size:0.74rem">External</span>
+					</li>
+				</ul>
+			</div>
+		</div>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+		<!-- =================================================================
+		     INTERACTIVE RESUME PDF VIEWER MODAL
+		     ================================================================= -->
+		<div class="modal-backdrop" id="resume-backdrop">
+			<div class="resume-modal-box" role="dialog" aria-label="Resume Preview">
+				<div class="resume-modal-header">
+					<div style="display:flex;align-items:center;gap:10px;font-family:var(--font-display);font-weight:700">
+						<i class="fas fa-file-pdf" style="color:var(--accent-cyan)"></i>
+						<span>Suvin Singh &mdash; Resume.pdf</span>
+					</div>
+					<div style="display:flex;align-items:center;gap:10px">
+						<a href="resume.pdf" download="Suvin_Singh_Resume.pdf" class="btn-resume-nav">
+							<i class="fas fa-download"></i>
+							<span>Download PDF</span>
+						</a>
+						<button type="button" class="copy-btn" onclick="closeResumeModal()">
+							<i class="fas fa-times"></i> Close
+						</button>
+					</div>
+				</div>
+				<iframe src="resume.pdf" class="resume-iframe" title="Suvin Singh Resume PDF"></iframe>
+			</div>
+		</div>
 
+		<!-- Toast Notification Container -->
+		<div id="toast-container"></div>
+
+		<!-- Interactive Engine Script -->
+		<script src="assets/js/portfolio.js"></script>
 	</body>
 </html>
