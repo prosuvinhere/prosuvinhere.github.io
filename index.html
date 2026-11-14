@@ -3,339 +3,537 @@
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<title>Suvin Singh — Data Engineer &amp; Solutions Architect</title>
+		<title>Suvin Singh — Data Engineer &amp; AWS Solutions Architect</title>
 		<meta name="description" content="Suvin Singh — Data Engineer at Deloitte and AWS Certified Solutions Architect building terabyte-scale ELT pipelines and distributed lakehouse platforms using PySpark, Databricks, dbt, Snowflake, and AWS." />
 		<meta name="author" content="Suvin Singh" />
-		<meta property="og:title" content="Suvin Singh — Data Engineer &amp; Solutions Architect" />
+		<meta property="og:title" content="Suvin Singh — Data Engineer &amp; AWS Solutions Architect" />
 		<meta property="og:description" content="Building terabyte-scale ELT pipelines and distributed lakehouse platforms using PySpark, Databricks, dbt, Snowflake, and AWS." />
 		<meta property="og:url" content="https://prosuvinhere.github.io/" />
 		<meta property="og:type" content="website" />
 
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
 		<link rel="stylesheet" href="assets/css/portfolio.css" />
 		<link rel="icon" href="images/favicon1.ico" type="image/x-icon" />
 	</head>
 	<body>
-		<!-- Minimal Sticky Header -->
-		<header class="site-header">
-			<div class="nav-inner">
-				<a href="#top" class="brand">
-					<span class="status-dot" title="Data Associate Engineer at Deloitte"></span>
+		<!-- Apple Sticky Frosted Local Nav -->
+		<nav class="apple-nav" aria-label="Global">
+			<div class="apple-nav-inner">
+				<a href="#overview" class="apple-nav-title">
 					<span>Suvin Singh</span>
+					<span class="apple-nav-badge">AWS Architect</span>
 				</a>
 
-				<ul class="nav-menu">
+				<ul class="apple-nav-links">
+					<li><a href="#overview" class="active">Overview</a></li>
 					<li><a href="#experience">Experience</a></li>
+					<li><a href="#architecture">Architecture</a></li>
 					<li><a href="#projects">Projects</a></li>
-					<li><a href="#architecture">Systems</a></li>
-					<li><a href="#stack">Stack</a></li>
-					<li><a href="#education">Education</a></li>
+					<li><a href="#specs">Tech Specs</a></li>
 					<li><a href="#contact">Contact</a></li>
 				</ul>
 
-				<div class="nav-controls">
-					<a href="resume.pdf" target="_blank" class="text-link" style="font-size:0.82rem">
-						<span>Resume</span>
-						<span class="arrow-up-right">↗</span>
-					</a>
-					<button type="button" class="icon-btn" id="theme-toggle" aria-label="Toggle theme">☀</button>
-				</div>
+				<a href="resume.pdf" target="_blank" class="apple-nav-cta">Resume</a>
 			</div>
-		</header>
+		</nav>
 
-		<main class="page-wrap" id="top">
-			<!-- Intro -->
-			<section class="intro fade-up">
-				<div class="intro-header">
-					<img src="images/IMG_5421.jpg" alt="Suvin Singh" class="avatar" />
-					<div>
-						<h1 class="intro-title">Suvin Singh</h1>
-						<p class="intro-role">Data Associate Engineer at Deloitte &middot; AWS Certified Solutions Architect</p>
+		<main>
+			<!-- =================================================================
+			     CHAPTER 1 (SPACE BLACK): HERO & APPLE BENTO SPEC GRID
+			     ================================================================= -->
+			<section class="chapter-dark hero-section" id="overview">
+				<div class="container-wide">
+					<div class="apple-reveal in-view">
+						<span class="eyebrow eyebrow-amber">Data Engineer &middot; AWS Certified Solutions Architect</span>
+						<h1 class="display-hero">Built for terabyte scale.</h1>
+						<p class="lead-copy-dark">
+							<strong>Suvin Singh</strong> architects high-throughput ELT pipelines and distributed lakehouse platforms at <strong>Deloitte</strong> using <strong>PySpark, Databricks, dbt, Snowflake, and AWS</strong> to cut query latency and enterprise cloud spend.
+						</p>
+
+						<div class="hero-actions">
+							<a href="resume.pdf" target="_blank" class="btn-apple-primary">
+								<span>View Resume PDF</span>
+							</a>
+							<button type="button" class="link-apple-chevron" id="copy-email-btn">
+								<span>suvinsingh.work@gmail.com</span>
+								<span>›</span>
+							</button>
+							<a href="https://linkedin.com/in/suvin-singh" target="_blank" rel="noopener noreferrer" class="link-apple-chevron">
+								<span>LinkedIn</span>
+								<span>›</span>
+							</a>
+							<a href="https://github.com/prosuvinhere" target="_blank" rel="noopener noreferrer" class="link-apple-chevron">
+								<span>GitHub</span>
+								<span>›</span>
+							</a>
+						</div>
 					</div>
-				</div>
 
-				<p class="intro-bio">
-					Data Engineer building terabyte-scale ELT pipelines and distributed lakehouse platforms using <strong>PySpark, Databricks, dbt, Snowflake, and AWS</strong> to cut query latency and enterprise cloud spend. Based in Hyderabad, India.
-				</p>
-
-				<div class="intro-links">
-					<button type="button" class="text-link" id="copy-email-btn">
-						<span>suvinsingh.work@gmail.com</span>
-						<span class="arrow-up-right">⎘</span>
-					</button>
-					<a href="https://linkedin.com/in/suvin-singh" target="_blank" rel="noopener noreferrer" class="text-link">
-						<span>LinkedIn</span>
-						<span class="arrow-up-right">↗</span>
-					</a>
-					<a href="https://github.com/prosuvinhere" target="_blank" rel="noopener noreferrer" class="text-link">
-						<span>GitHub</span>
-						<span class="arrow-up-right">↗</span>
-					</a>
-					<a href="https://topmate.io/suvin_singh" target="_blank" rel="noopener noreferrer" class="text-link">
-						<span>Topmate</span>
-						<span class="arrow-up-right">↗</span>
-					</a>
-					<a href="resume.pdf" target="_blank" class="text-link">
-						<span>Resume PDF</span>
-						<span class="arrow-up-right">↗</span>
-					</a>
-				</div>
-			</section>
-
-			<!-- Minimal Typographic Metrics Strip -->
-			<div class="metrics-row fade-up delay-1">
-				<div class="metric-item">
-					<span class="metric-num">5TB+</span>
-					<span class="metric-caption">Daily financial records</span>
-				</div>
-				<div class="metric-item">
-					<span class="metric-num">-65%</span>
-					<span class="metric-caption">Pipeline latency cut</span>
-				</div>
-				<div class="metric-item">
-					<span class="metric-num">$45k+</span>
-					<span class="metric-caption">Annual cloud saved</span>
-				</div>
-				<div class="metric-item">
-					<span class="metric-num">99.9%</span>
-					<span class="metric-caption">End-to-end accuracy</span>
-				</div>
-			</div>
-
-			<!-- Professional Experience -->
-			<section class="section fade-up delay-2" id="experience">
-				<div class="section-label">Experience</div>
-
-				<div class="interactive-list">
-					<!-- Deloitte -->
-					<article class="list-row">
-						<div class="row-head">
-							<h2 class="row-title">
-								Data Associate Engineer <span class="row-company">&middot; Deloitte</span>
-							</h2>
-							<span class="row-meta">Sept. 2025 &ndash; Present &middot; Hyderabad</span>
+					<!-- Apple Silicon Style Bento Grid -->
+					<div class="bento-grid apple-reveal">
+						<!-- Tile 1: Profile & Identity -->
+						<div class="bento-tile tile-span-7 bento-profile-tile">
+							<img src="images/IMG_5421.jpg" alt="Suvin Singh" class="bento-avatar" />
+							<div>
+								<div class="bento-kicker">Deloitte &middot; Hyderabad, India</div>
+								<h2 style="font-size:1.75rem;font-weight:700;letter-spacing:-0.025em;color:#f5f5f7;margin-bottom:8px">
+									Data Associate Engineer
+								</h2>
+								<p class="bento-desc">
+									Integrating enterprise <strong>SAP &amp; Oracle ERP</strong> workloads into centralized lakehouse platforms for <strong>150+ cross-functional teams</strong>. B.Tech CSE from <strong>VIT Vellore</strong> (8.68 CGPA).
+								</p>
+							</div>
 						</div>
-						<ul class="row-bullets">
-							<li>Architected high-throughput ELT pipelines using <strong>dbt, Snowflake, and Databricks</strong> to integrate enterprise ERP systems (SAP, Oracle), establishing a centralized lakehouse architecture for <strong>150+ cross-functional teams</strong>.</li>
-							<li>Spearheaded migration of legacy on-premise workloads to <strong>AWS cloud architecture</strong>, tuning cluster compute to reduce pipeline latency by <strong>65%</strong> and saving <strong>$45,000+</strong> in recurring annual cloud spend.</li>
-							<li>Engineered fault-tolerant data pipelines processing <strong>5TB+ of financial records daily</strong> with automated validation checks, raising end-to-end data accuracy to <strong>99.9%</strong>.</li>
-							<li>Built optimized <strong>Power BI semantic models</strong> backed by dimensional data marts, eliminating manual analyst reporting and reclaiming <strong>20+ stakeholder hours per week</strong>.</li>
-						</ul>
-						<ul class="inline-tags">
-							<li>Databricks</li>
-							<li>PySpark</li>
-							<li>Snowflake</li>
-							<li>dbt</li>
-							<li>AWS</li>
-							<li>SAP &amp; Oracle ERP</li>
-							<li>Power BI</li>
-						</ul>
-					</article>
 
-					<!-- Prorigo Software -->
-					<article class="list-row">
-						<div class="row-head">
-							<h2 class="row-title">
-								Python Developer (Internship) <span class="row-company">&middot; Prorigo Software</span>
-							</h2>
-							<span class="row-meta">Jan. 2025 &ndash; June 2025 &middot; Pune</span>
+						<!-- Tile 2: 5TB+ Daily Throughput -->
+						<div class="bento-tile tile-span-5">
+							<div class="bento-kicker">Fault-Tolerant Throughput</div>
+							<div class="bento-stat-huge">5TB+</div>
+							<p class="bento-desc">
+								Financial records processed daily with automated validation checks and <strong>99.9% end-to-end data accuracy</strong>.
+							</p>
 						</div>
-						<ul class="row-bullets">
-							<li>Developed a distributed extraction pipeline leveraging <strong>OCR and deep learning</strong>, yielding <strong>98% extraction accuracy</strong> and eliminating <strong>500+ hours</strong> of manual entry per month.</li>
-						</ul>
-						<ul class="inline-tags">
-							<li>Python</li>
-							<li>OCR</li>
-							<li>Deep Learning</li>
-							<li>Distributed Pipelines</li>
-						</ul>
-					</article>
 
-					<!-- Toshiba Mitsubishi-EIC India -->
-					<article class="list-row">
-						<div class="row-head">
-							<h2 class="row-title">
-								AI Developer (Internship) <span class="row-company">&middot; Toshiba Mitsubishi-EIC India</span>
-							</h2>
-							<span class="row-meta">Aug. 2023 &ndash; Oct. 2023 &middot; Hyderabad</span>
+						<!-- Tile 3: 65% Latency Reduction -->
+						<div class="bento-tile tile-span-4">
+							<div class="bento-kicker">Compute Optimization</div>
+							<div class="bento-stat-huge bento-stat-green">65%</div>
+							<p class="bento-desc">
+								Reduction in pipeline latency after migrating legacy on-premise workloads to <strong>AWS cloud architecture</strong>.
+							</p>
 						</div>
-						<ul class="row-bullets">
-							<li>Containerized an enterprise NLP query engine using <strong>Docker and LangChain</strong> with automated <strong>CI/CD deployments</strong>, driving an <strong>83% reduction</strong> in IT ticket resolution turnaround.</li>
-						</ul>
-						<ul class="inline-tags">
-							<li>Docker</li>
-							<li>LangChain</li>
-							<li>CI/CD</li>
-							<li>Python</li>
-						</ul>
-					</article>
-				</div>
-			</section>
 
-			<!-- Key Engineering Projects & Research -->
-			<section class="section fade-up delay-3" id="projects">
-				<div class="section-label">Projects &amp; Research</div>
-
-				<div class="interactive-list">
-					<!-- Project 1 -->
-					<article class="list-row">
-						<div class="row-head">
-							<h2 class="row-title">Enterprise Audit Data Lake</h2>
-							<span class="row-meta">Python &middot; DuckDB &middot; Databricks &middot; AWS S3 &middot; Docker</span>
+						<!-- Tile 4: $45K+ Cloud Savings -->
+						<div class="bento-tile tile-span-4">
+							<div class="bento-kicker">Cloud Efficiency</div>
+							<div class="bento-stat-huge bento-stat-gold">$45K+</div>
+							<p class="bento-desc">
+								Saved in recurring annual enterprise cloud spend through Databricks &amp; AWS cluster compute tuning.
+							</p>
 						</div>
-						<ul class="row-bullets">
-							<li>Engineered an isolated, local-compute processing engine using <strong>DuckDB and local LLMs</strong> to parse <strong>5M+ rows</strong> of confidential financial transactions.</li>
-							<li>Implemented containerized microservices for anomaly detection, eliminating cloud data ingress costs and reducing query latency by <strong>60%</strong>.</li>
-						</ul>
-					</article>
 
-					<!-- Project 2 -->
-					<article class="list-row">
-						<div class="row-head">
-							<h2 class="row-title">Real-Time Market Intelligence Engine</h2>
-							<span class="row-meta">Python &middot; Apache Airflow &middot; REST APIs &middot; Redis</span>
+						<!-- Tile 5: AWS Certified -->
+						<div class="bento-tile tile-span-4">
+							<div class="bento-kicker">Amazon Web Services</div>
+							<div style="font-size:1.85rem;font-weight:700;letter-spacing:-0.03em;color:#f5f5f7;margin:12px 0">
+								Solutions Architect
+							</div>
+							<p class="bento-desc">
+								<strong>AWS Certified Associate</strong> (Dec. 2025). Designing resilient, cost-optimized cloud lakehouses.
+							</p>
 						</div>
-						<ul class="row-bullets">
-							<li>Deployed an automated data ingestion platform orchestrated with <strong>Apache Airflow</strong>, streaming continuous updates across <strong>1,000+ daily listings</strong>.</li>
-							<li>Integrated <strong>Redis caching layer</strong> and indexed querying patterns, sustaining a <strong>300% concurrent traffic spike</strong> with sub-second response times.</li>
-						</ul>
-					</article>
-
-					<!-- Publication -->
-					<article class="list-row">
-						<div class="row-head">
-							<h2 class="row-title">
-								A Comparative Analysis of Web 3.0, Web 2.0, and Web 1.0 <span class="row-company">&middot; Inderscience</span>
-							</h2>
-							<span class="row-meta">Research Publication</span>
-						</div>
-						<ul class="row-bullets">
-							<li>Published peer-reviewed research in Inderscience Publishers examining architectural paradigms, decentralization trade-offs, and systemic web evolution.</li>
-						</ul>
-					</article>
-
-					<!-- Additional Projects -->
-					<article class="list-row">
-						<div class="row-head">
-							<h2 class="row-title">SQLTranslator &amp; URL2Email</h2>
-							<span class="row-meta">LangChain &middot; LLaMA 3.1 &middot; ChromaDB &middot; Streamlit</span>
-						</div>
-						<ul class="row-bullets">
-							<li>Built natural-language-to-SQL query translation and automated job-scraping outreach tools powered by open-source LLMs and vector embeddings.</li>
-						</ul>
-					</article>
-				</div>
-			</section>
-
-			<!-- Minimal Interactive System Schematic -->
-			<section class="section" id="architecture">
-				<div class="section-label">System Architecture</div>
-
-				<div class="arch-switcher" role="tablist">
-					<button type="button" class="arch-btn active" data-arch="lakehouse">ERP Lakehouse</button>
-					<button type="button" class="arch-btn" data-arch="audit">Audit Data Lake</button>
-					<button type="button" class="arch-btn" data-arch="market">Airflow Stream</button>
-				</div>
-
-				<div class="schematic-box">
-					<div class="schematic-nodes" id="schematic-nodes"></div>
-					<div class="schematic-detail">
-						<span id="schematic-detail-text"></span>
-						<span class="schematic-metric" id="schematic-detail-metric"></span>
 					</div>
 				</div>
 			</section>
 
-			<!-- Technical Expertise -->
-			<section class="section" id="stack">
-				<div class="section-label">Technical Expertise</div>
+			<!-- =================================================================
+			     CHAPTER 2 (APPLE SILVER): PROFESSIONAL EXPERIENCE
+			     ================================================================= -->
+			<section class="chapter-light" id="experience">
+				<div class="container">
+					<div class="apple-reveal">
+						<span class="eyebrow eyebrow-dark-blue">Professional Experience</span>
+						<h2 class="display-section-light">Performance at enterprise scale.</h2>
+						<p class="lead-copy-light">
+							From fortune-scale ERP lakehouse migrations at <strong>Deloitte</strong> to deep-learning OCR pipelines and containerized NLP engines.
+						</p>
+					</div>
 
-				<div class="stack-table">
-					<div class="stack-row">
-						<span class="stack-cat">Data &amp; Cloud</span>
-						<span class="stack-items">Databricks, PySpark, AWS (S3, Redshift, EC2), Snowflake, dbt, Apache Airflow, Apache Kafka, Delta Lake, Star/Snowflake Schema</span>
-					</div>
-					<div class="stack-row">
-						<span class="stack-cat">Languages &amp; Storage</span>
-						<span class="stack-items">Python, SQL, DuckDB, Redis, FastAPI, Streamlit</span>
-					</div>
-					<div class="stack-row">
-						<span class="stack-cat">DevOps &amp; Infra</span>
-						<span class="stack-items">Docker, Terraform, CI/CD (GitHub Actions), Microservices Architecture</span>
-					</div>
-					<div class="stack-row">
-						<span class="stack-cat">Enterprise &amp; BI</span>
-						<span class="stack-items">SAP, Oracle ERP, Power BI, Tableau, Automated Data Quality Frameworks</span>
+					<div class="exp-stack">
+						<!-- Deloitte -->
+						<article class="apple-light-card apple-reveal">
+							<div class="exp-left-col">
+								<div>
+									<div class="exp-company-name">Deloitte</div>
+									<div class="exp-role-title">Data Associate Engineer</div>
+									<div class="exp-period">Sept. 2025 &ndash; Present &middot; Hyderabad, India</div>
+								</div>
+								<div class="exp-callout-stat">
+									<div class="exp-callout-num">150+ teams</div>
+									<div class="exp-callout-label">Served by centralized dbt, Snowflake &amp; Databricks lakehouse</div>
+								</div>
+							</div>
+
+							<div>
+								<ul class="exp-points">
+									<li>Architected high-throughput ELT pipelines using <strong>dbt, Snowflake, and Databricks</strong> to integrate enterprise ERP systems (<strong>SAP, Oracle</strong>), establishing a centralized lakehouse architecture for <strong>150+ cross-functional teams</strong>.</li>
+									<li>Spearheaded migration of legacy on-premise workloads to <strong>AWS cloud architecture</strong>, tuning cluster compute to reduce pipeline latency by <strong>65%</strong> and saving <strong>$45,000+</strong> in recurring annual cloud spend.</li>
+									<li>Engineered fault-tolerant data pipelines processing <strong>5TB+ of financial records daily</strong> with automated validation checks, raising end-to-end data accuracy to <strong>99.9%</strong>.</li>
+									<li>Built optimized <strong>Power BI semantic models</strong> backed by dimensional data marts, eliminating manual analyst reporting and reclaiming <strong>20+ stakeholder hours per week</strong>.</li>
+								</ul>
+								<ul class="apple-pill-row">
+									<li>Databricks</li>
+									<li>PySpark</li>
+									<li>Snowflake</li>
+									<li>dbt</li>
+									<li>AWS (S3, Redshift, EC2)</li>
+									<li>SAP &amp; Oracle ERP</li>
+									<li>Power BI</li>
+								</ul>
+							</div>
+						</article>
+
+						<!-- Prorigo Software -->
+						<article class="apple-light-card apple-reveal">
+							<div class="exp-left-col">
+								<div>
+									<div class="exp-company-name">Prorigo Software</div>
+									<div class="exp-role-title">Python Developer (Internship)</div>
+									<div class="exp-period">Jan. 2025 &ndash; June 2025 &middot; Pune, India</div>
+								</div>
+								<div class="exp-callout-stat">
+									<div class="exp-callout-num">98%</div>
+									<div class="exp-callout-label">Extraction accuracy, eliminating 500+ manual hours/month</div>
+								</div>
+							</div>
+
+							<div>
+								<ul class="exp-points">
+									<li>Developed a distributed extraction pipeline leveraging <strong>OCR and deep learning</strong>, yielding <strong>98% extraction accuracy</strong> and eliminating <strong>500+ hours</strong> of manual entry per month.</li>
+								</ul>
+								<ul class="apple-pill-row">
+									<li>Python</li>
+									<li>Distributed Pipelines</li>
+									<li>OCR</li>
+									<li>Deep Learning</li>
+								</ul>
+							</div>
+						</article>
+
+						<!-- Toshiba Mitsubishi-EIC India -->
+						<article class="apple-light-card apple-reveal">
+							<div class="exp-left-col">
+								<div>
+									<div class="exp-company-name">Toshiba Mitsubishi-EIC</div>
+									<div class="exp-role-title">AI Developer (Internship)</div>
+									<div class="exp-period">Aug. 2023 &ndash; Oct. 2023 &middot; Hyderabad, India</div>
+								</div>
+								<div class="exp-callout-stat">
+									<div class="exp-callout-num">83% faster</div>
+									<div class="exp-callout-label">Reduction in enterprise IT ticket resolution turnaround</div>
+								</div>
+							</div>
+
+							<div>
+								<ul class="exp-points">
+									<li>Containerized an enterprise <strong>NLP query engine</strong> using <strong>Docker and LangChain</strong> with automated <strong>CI/CD deployments</strong>, driving an <strong>83% reduction</strong> in IT ticket resolution turnaround.</li>
+								</ul>
+								<ul class="apple-pill-row">
+									<li>Docker</li>
+									<li>LangChain</li>
+									<li>CI/CD (GitHub Actions)</li>
+									<li>Python</li>
+								</ul>
+							</div>
+						</article>
 					</div>
 				</div>
 			</section>
 
-			<!-- Education, Certifications & Leadership -->
-			<section class="section" id="education">
-				<div class="section-label">Education &amp; Credentials</div>
+			<!-- =================================================================
+			     CHAPTER 3 (SPACE BLACK): INTERACTIVE SYSTEM ARCHITECTURE
+			     ================================================================= -->
+			<section class="chapter-dark" id="architecture">
+				<div class="container">
+					<div class="apple-reveal" style="text-align:center">
+						<span class="eyebrow eyebrow-blue">System Architecture</span>
+						<h2 class="display-section-dark">Under the hood.</h2>
+						<p class="lead-copy-dark" style="margin:0 auto">
+							Explore three production data architectures. Switch pipelines and click any stage to inspect the engineering design.
+						</p>
+					</div>
 
-				<div class="interactive-list">
-					<div class="list-row">
-						<div class="row-head">
-							<h3 class="row-title">AWS Certified Solutions Architect &ndash; Associate</h3>
-							<span class="row-meta">Amazon Web Services &middot; Dec. 2025</span>
+					<div class="segmented-wrap apple-reveal">
+						<div class="apple-segmented" role="tablist">
+							<button type="button" class="seg-btn active" data-arch="lakehouse">Enterprise ERP Lakehouse</button>
+							<button type="button" class="seg-btn" data-arch="audit">Zero-Ingress Audit Lake</button>
+							<button type="button" class="seg-btn" data-arch="market">Real-Time Market Stream</button>
 						</div>
 					</div>
 
-					<div class="list-row">
-						<div class="row-head">
-							<h3 class="row-title">
-								Vellore Institute of Technology (VIT), Vellore <span class="row-company">&middot; B.Tech CSE</span>
-							</h3>
-							<span class="row-meta">July 2021 &ndash; July 2025 &middot; CGPA: 8.68 / 10.0</span>
+					<div class="apple-reveal">
+						<div class="arch-stage-grid" id="arch-stage-grid"></div>
+						<div class="arch-spotlight-banner">
+							<p class="spotlight-copy" id="spotlight-copy"></p>
+							<div class="spotlight-badge" id="spotlight-badge"></div>
 						</div>
-					</div>
-
-					<div class="list-row">
-						<div class="row-head">
-							<h3 class="row-title">
-								Manager (Sports, Finance &amp; Stalls) <span class="row-company">&middot; Riviera ’23 (VIT)</span>
-							</h3>
-							<span class="row-meta">Leadership</span>
-						</div>
-						<ul class="row-bullets">
-							<li>Managed operations, vendor stalls, and financial budgeting for VIT’s annual international cultural and sports festival.</li>
-						</ul>
 					</div>
 				</div>
 			</section>
 
-			<!-- Contact -->
-			<section class="section" id="contact">
-				<div class="section-label">Contact</div>
-
-				<p style="font-size:0.92rem;color:var(--text-secondary)">
-					Reach out directly at <a href="mailto:suvinsingh.work@gmail.com" style="color:var(--text);text-decoration:underline;text-underline-offset:3px">suvinsingh.work@gmail.com</a> or <a href="tel:+918830545823" style="color:var(--text);text-decoration:underline;text-underline-offset:3px">+91-8830545823</a>, or send a note below.
-				</p>
-
-				<form class="contact-box" id="contact-form" action="https://api.web3forms.com/submit" method="POST">
-					<input type="hidden" name="access_key" value="c7dae0dd-3f06-4aa6-a2ce-48b049139a5b" />
-					<div class="form-grid">
-						<input type="text" name="name" class="minimal-input" placeholder="Name" required />
-						<input type="email" name="email" class="minimal-input" placeholder="Email" required />
+			<!-- =================================================================
+			     CHAPTER 4 (APPLE SILVER): KEY ENGINEERING PROJECTS & RESEARCH
+			     ================================================================= -->
+			<section class="chapter-light" id="projects">
+				<div class="container">
+					<div class="apple-reveal">
+						<span class="eyebrow eyebrow-dark-blue">Key Engineering Projects &amp; Research</span>
+						<h2 class="display-section-light">Engineered to the extreme.</h2>
+						<p class="lead-copy-light">
+							Local-compute OLAP engines, fault-tolerant Apache Airflow streaming platforms, and published academic research.
+						</p>
 					</div>
-					<textarea name="message" class="minimal-input" placeholder="Message..." required></textarea>
-					<div style="display:flex;align-items:center;justify-content:space-between;gap:12px">
-						<button type="submit" class="btn-minimal">Send message</button>
-						<span id="form-status" style="font-family:var(--font-mono);font-size:0.75rem;color:var(--text-muted)"></span>
+
+					<div class="projects-apple-grid">
+						<!-- Project 1 -->
+						<article class="project-apple-card apple-reveal">
+							<div>
+								<div class="proj-eyebrow">DuckDB &middot; Local LLMs &middot; Docker</div>
+								<h3 class="proj-heading">Enterprise Audit Data Lake</h3>
+								<div class="proj-stat-strip">
+									<div class="proj-stat-item">
+										<strong>5M+ rows</strong>
+										<span>Confidential financial records</span>
+									</div>
+									<div class="proj-stat-item">
+										<strong>60% faster</strong>
+										<span>Query latency with $0 ingress</span>
+									</div>
+								</div>
+								<ul class="exp-points">
+									<li>Engineered an isolated, local-compute processing engine using <strong>DuckDB and local LLMs</strong> to parse <strong>5M+ rows</strong> of confidential financial transactions.</li>
+									<li>Implemented containerized microservices for anomaly detection, eliminating cloud data ingress costs and reducing query latency by <strong>60%</strong>.</li>
+								</ul>
+							</div>
+							<ul class="apple-pill-row">
+								<li>Python</li>
+								<li>DuckDB</li>
+								<li>Databricks</li>
+								<li>AWS S3</li>
+								<li>Docker</li>
+							</ul>
+						</article>
+
+						<!-- Project 2 -->
+						<article class="project-apple-card apple-reveal">
+							<div>
+								<div class="proj-eyebrow">Apache Airflow &middot; Redis &middot; REST APIs</div>
+								<h3 class="proj-heading">Real-Time Market Intelligence Engine</h3>
+								<div class="proj-stat-strip">
+									<div class="proj-stat-item">
+										<strong>1,000+ daily</strong>
+										<span>Streaming market listings</span>
+									</div>
+									<div class="proj-stat-item">
+										<strong>300% spike</strong>
+										<span>Sustained at sub-second latency</span>
+									</div>
+								</div>
+								<ul class="exp-points">
+									<li>Deployed an automated data ingestion platform orchestrated with <strong>Apache Airflow</strong>, streaming continuous updates across <strong>1,000+ daily listings</strong>.</li>
+									<li>Integrated <strong>Redis caching layer</strong> and indexed querying patterns, sustaining a <strong>300% concurrent traffic spike</strong> with sub-second response times.</li>
+								</ul>
+							</div>
+							<ul class="apple-pill-row">
+								<li>Python</li>
+								<li>Apache Airflow</li>
+								<li>REST APIs</li>
+								<li>Redis</li>
+							</ul>
+						</article>
+
+						<!-- Project 3: Research Publication -->
+						<article class="project-apple-card apple-reveal">
+							<div>
+								<div class="proj-eyebrow">Inderscience Publishers &middot; Research</div>
+								<h3 class="proj-heading">A Comparative Analysis of Web 3.0, Web 2.0, and Web 1.0</h3>
+								<ul class="exp-points">
+									<li>Authored and published a peer-reviewed comparative study in <strong>Inderscience Publishers</strong> examining decentralized architectures, consensus protocols, and systemic web evolution.</li>
+								</ul>
+							</div>
+							<ul class="apple-pill-row">
+								<li>Published Research</li>
+								<li>Distributed Systems</li>
+								<li>Inderscience</li>
+							</ul>
+						</article>
+
+						<!-- Project 4: SQLTranslator & URL2Email -->
+						<article class="project-apple-card apple-reveal">
+							<div>
+								<div class="proj-eyebrow">Applied AI &amp; Developer Tools</div>
+								<h3 class="proj-heading">SQLTranslator &amp; URL2Email</h3>
+								<ul class="exp-points">
+									<li><strong>SQLTranslator:</strong> Natural-language-to-SQL engine converting conversational questions into executable relational queries using LangChain and Hugging Face embeddings.</li>
+									<li><strong>URL2Email:</strong> Automated job-scraping and cold-outreach synthesis pipeline powered by LLaMA 3.1 and ChromaDB vector retrieval.</li>
+								</ul>
+							</div>
+							<ul class="apple-pill-row">
+								<li>LangChain</li>
+								<li>LLaMA 3.1</li>
+								<li>ChromaDB</li>
+								<li>Streamlit</li>
+							</ul>
+						</article>
 					</div>
-				</form>
+				</div>
 			</section>
 
-			<!-- Footer -->
-			<footer class="site-footer">
-				<span>&copy; 2026 Suvin Singh</span>
-				<span>Press <kbd style="border:1px solid var(--border);padding:1px 5px;border-radius:3px">T</kbd> to toggle theme</span>
-			</footer>
+			<!-- =================================================================
+			     CHAPTER 5 (SPACE BLACK): APPLE "TECH SPECS" TABLE
+			     ================================================================= -->
+			<section class="chapter-dark" id="specs">
+				<div class="container">
+					<div class="apple-reveal">
+						<span class="eyebrow eyebrow-blue">Technical Specifications</span>
+						<h2 class="display-section-dark">The complete spec.</h2>
+					</div>
+
+					<div class="tech-specs-table apple-reveal">
+						<div class="spec-row">
+							<div class="spec-label">Data Engineering &amp; Cloud</div>
+							<div class="spec-content">
+								<div>
+									<strong>Compute &amp; Lakehouse</strong>
+									Databricks, PySpark, Delta Lake, Star/Snowflake Schema
+								</div>
+								<div>
+									<strong>Warehousing &amp; Cloud</strong>
+									Snowflake, dbt, AWS (S3, Redshift, EC2), Apache Airflow, Apache Kafka
+								</div>
+							</div>
+						</div>
+
+						<div class="spec-row">
+							<div class="spec-label">Languages &amp; Storage</div>
+							<div class="spec-content">
+								<div>
+									<strong>Core Languages &amp; OLAP</strong>
+									Python, SQL, DuckDB
+								</div>
+								<div>
+									<strong>Caching &amp; Services</strong>
+									Redis, FastAPI, Streamlit
+								</div>
+							</div>
+						</div>
+
+						<div class="spec-row">
+							<div class="spec-label">DevOps &amp; Infrastructure</div>
+							<div class="spec-content">
+								<div>
+									<strong>Containers &amp; IaC</strong>
+									Docker, Terraform, Microservices Architecture
+								</div>
+								<div>
+									<strong>Automation</strong>
+									CI/CD Pipelines (GitHub Actions)
+								</div>
+							</div>
+						</div>
+
+						<div class="spec-row">
+							<div class="spec-label">Enterprise Systems &amp; BI</div>
+							<div class="spec-content">
+								<div>
+									<strong>ERP Integrations</strong>
+									SAP ERP, Oracle ERP
+								</div>
+								<div>
+									<strong>Semantic BI &amp; Governance</strong>
+									Power BI, Tableau, Automated Data Quality Frameworks
+								</div>
+							</div>
+						</div>
+
+						<div class="spec-row">
+							<div class="spec-label">Certifications</div>
+							<div class="spec-content">
+								<div>
+									<strong>Amazon Web Services</strong>
+									AWS Certified Solutions Architect &ndash; Associate (Dec. 2025)
+								</div>
+								<div>
+									<strong>Academic Certifications</strong>
+									Entrepreneurship (IIT Madras) &middot; Forests &amp; Wildlife Ecology (IIT Kanpur)
+								</div>
+							</div>
+						</div>
+
+						<div class="spec-row">
+							<div class="spec-label">Education &amp; Leadership</div>
+							<div class="spec-content">
+								<div>
+									<strong>Vellore Institute of Technology (VIT)</strong>
+									B.Tech in Computer Science and Engineering (July 2021 &ndash; July 2025) &middot; CGPA: 8.68 / 10.0
+								</div>
+								<div>
+									<strong>Leadership &amp; Honors</strong>
+									Manager (Sports, Finance &amp; Stalls) &ndash; Riviera ’23 &middot; MSTSE State Rank 59th
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- =================================================================
+			     CHAPTER 6 (APPLE SILVER): CONTACT
+			     ================================================================= -->
+			<section class="chapter-light" id="contact">
+				<div class="container">
+					<div class="apple-reveal">
+						<span class="eyebrow eyebrow-dark-blue">Connect</span>
+						<h2 class="display-section-light">Get in touch.</h2>
+						<p class="lead-copy-light">
+							Available for data engineering discussions, cloud architecture collaborations, and mentorship.
+						</p>
+					</div>
+
+					<div class="contact-apple-layout apple-reveal">
+						<div class="contact-tile">
+							<h3 style="font-size:1.45rem;font-weight:700;margin-bottom:20px">Direct Channels</h3>
+							<div style="display:grid;gap:18px;font-size:1.02rem">
+								<div>
+									<div style="font-size:0.78rem;color:var(--apple-gray-dark);text-transform:uppercase;font-weight:600">Email</div>
+									<a href="mailto:suvinsingh.work@gmail.com" style="color:var(--apple-blue);font-weight:500">suvinsingh.work@gmail.com</a>
+								</div>
+								<div>
+									<div style="font-size:0.78rem;color:var(--apple-gray-dark);text-transform:uppercase;font-weight:600">Phone</div>
+									<a href="tel:+918830545823" style="color:var(--apple-text-dark);font-weight:500">+91-8830545823</a>
+								</div>
+								<div>
+									<div style="font-size:0.78rem;color:var(--apple-gray-dark);text-transform:uppercase;font-weight:600">LinkedIn</div>
+									<a href="https://linkedin.com/in/suvin-singh" target="_blank" rel="noopener noreferrer" style="color:var(--apple-blue);font-weight:500">linkedin.com/in/suvin-singh ›</a>
+								</div>
+								<div>
+									<div style="font-size:0.78rem;color:var(--apple-gray-dark);text-transform:uppercase;font-weight:600">GitHub</div>
+									<a href="https://github.com/prosuvinhere" target="_blank" rel="noopener noreferrer" style="color:var(--apple-blue);font-weight:500">github.com/prosuvinhere ›</a>
+								</div>
+								<div>
+									<div style="font-size:0.78rem;color:var(--apple-gray-dark);text-transform:uppercase;font-weight:600">Mentorship</div>
+									<a href="https://topmate.io/suvin_singh" target="_blank" rel="noopener noreferrer" style="color:var(--apple-blue);font-weight:500">topmate.io/suvin_singh ›</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="contact-tile">
+							<h3 style="font-size:1.45rem;font-weight:700;margin-bottom:20px">Send a Message</h3>
+							<form id="apple-contact-form" action="https://api.web3forms.com/submit" method="POST">
+								<input type="hidden" name="access_key" value="c7dae0dd-3f06-4aa6-a2ce-48b049139a5b" />
+								<input type="text" name="name" class="apple-input" placeholder="Name" required />
+								<input type="email" name="email" class="apple-input" placeholder="Email" required />
+								<textarea name="message" class="apple-input" rows="4" placeholder="Message" required></textarea>
+								<div style="display:flex;align-items:center;justify-content:space-between;gap:12px">
+									<button type="submit" class="btn-apple-primary" style="border:none;cursor:pointer">Send Message</button>
+									<span id="apple-form-status" style="font-size:0.84rem;color:var(--apple-gray-dark)"></span>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</section>
 		</main>
+
+		<footer class="apple-footer">
+			<div class="apple-footer-inner">
+				<span>Copyright &copy; 2026 Suvin Singh. All rights reserved.</span>
+				<span>Hyderabad, India &middot; <a href="resume.pdf" target="_blank" style="color:var(--apple-text-dark)">Download Resume PDF</a></span>
+			</div>
+		</footer>
 
 		<script src="assets/js/portfolio.js"></script>
 	</body>
